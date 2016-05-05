@@ -1,4 +1,4 @@
-# ue4-vive-modular-pawn
+# ue4-vive-modular-pawn-bp
 A modular pawn setup and interactivity library for using the [HTC Vive](https://www.htcvive.com/uk/), and it's Motion Controllers, in the Unreal Engine.
 
 **IMPORTANT: This isn't ready for production use yet and so shouldn't really be used..**
@@ -6,7 +6,7 @@ A modular pawn setup and interactivity library for using the [HTC Vive](https://
 ## Overview
 There are a number of different input approaches used with the HTC Vive motion controller.  This project is to provide a modular system which will allow a pawn to support these approaches, along with a set of utility functions to allow simple implementation of interactive items in the environment.
 
-Ultimately there are to be two parallel versions, one in pure Blueprint and one using C++ as a base, and each of which will have a series of simple VR demos showing the interactivity principles being implemented.
+There are two parallel versions of this project, one using pure Blueprints and one using C++. This is the Blueprint version, the C++ version is available [here](https://github.com/Molt/ue4-vive-modular-pawn-cpp/).
 
 ## Current Status
 I'm migrating my existing work over to this repository.
