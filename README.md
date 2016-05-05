@@ -14,16 +14,16 @@ I'm migrating my existing work over to this repository.
 ## Interactivity Approaches
 The different interactivity mechanisms which are to be supported by the system are:
 
-### Controller Mesh (** Not yet implemented**)
+### Controller Mesh (**Not yet implemented**)
 Indicating the position and rotation of the component by the use of a static mesh component.
 * Pretty much every motion controller game ever..
 
-### Collision Volume (** Not yet implemented**)
+### Collision Volume (**Not yet implemented**)
 The controller has a volume attached which triggers events on interactive object.
 * Moving the controller near an object and allowing you to move it about (Dragging the drawers about in *The Lab*)
 * Acting as a non-physics blocking volume (The shields in *Audioshield*)
 
-### Gesture Recognition (** Not yet implemented **)
+### Gesture Recognition (**Not yet implemented**)
 Moving the controller round in a preset gesture to trigger a special event.
 * Writing letters in the air, and using text gesture recognition.
 * Drawing 'Magical symbols' in the air to cast spells.
@@ -32,7 +32,7 @@ Moving the controller round in a preset gesture to trigger a special event.
 A special implementation of *Ray* interaction which allows an easy implementation of beam weapons.
 * Weapons which travel in straight lines. (Firing lasers in *Space Pirates*)
 
-### Physics Handle (** Not yet implemented**)
+### Physics Handle (**Not yet implemented**)
 Attaching physics items to the controller so that you can either carry them about.
 * Moving, and throwing, props. (Many of the interactions in *Job Simulator*)
 * Using both controllers together for greater control over object positioning (The VR editor part of *Unreal Engine 4*)
@@ -58,32 +58,33 @@ Interacting with elements by firing a 'beam' in the direction of the controller.
 Using the location and rotation of the controller as raw driving features for an interaction.
 * Tracing curves through space (Drawing in *TiltBrush*)
 
+
 ## Interactive Utilities
 The following features will be written as helpful functions for implementing interactive elements.
 
-### Damage Actor (** Not yet implemented **)
+### Damage Actor (**Not yet implemented**)
 Applying damage to an item, and destroying it when it takes too much.
 * Damaging opponents and targets in 'non-instakill' methods. (Weapon results in *Space Pirates*, *Brookhaven Experiment* or *Arizona Sunshine*)
 
-### Destroy Actor (** Not yet implemented **)
+### Destroy Actor (**Not yet implemented **)
 Destroying an interactive target instantly.
 * Destroying targets which only need one hit. (Simple test targets)
 * Editor tools. (Deleting objects in the VR editor for *Unreal Engine 4*)
 
-### Grab Actor (** Not yet implemented **)
+### Grab Actor (**Not yet implemented**)
 Carrying an object round with you using the controller.
 * Moving props in a physics-based manner. (Moving props in *Job Simulator*)
 * Moving props in a non-physics environment. (Moving props in the VR editor for *Unreal Engine 4*)
 
-### Key Intersection (** Not yet implemented **)
+### Key Intersection (**Not yet implemented**)
 Carry a specific object to a particular place, and having it trigger a reaction automatically.
 * Used for key/lock interactions. (Putting a disk in the drive in *Job Simulator*)
 
-### Physics Drag (** Not yet implemented **)
+### Physics Drag (**Not yet implemented**)
 Moving an interactive object round in the environment using physics but without fixing it to the controller.
 * Dragging and rotating items in the world. (Opening draws, and rotating components in the Robot Repair portion of *The Lab*)
 
-### Physics Forces (** Not yet implemented **)
+### Physics Forces (**Not yet implemented**)
 Applying forces to objects in the world.
 
 ### Menu (**Not yet implemented**)
@@ -91,41 +92,41 @@ Using the controller to select options from a standard UI, inserted onto a mesh 
 * Selecting from a fixed-place menu. (The main menu in *StartVR*)
 * Selecting from a mobile menu (Choosing tools in *TiltBrush*)
 
-### Scripted Response (** Not yet implemented **)
+### Scripted Response (**Not yet implemented**)
 Allowing simple events to be fired in order to allow items to have their own custom behaviors written for them.
 
-### Selection Indicator, Audio (** Not yet implemented**)
+### Selection Indicator, Audio (**Not yet implemented**)
 Indicating the currently selected objects by making them have spatialized 3d audio cues.
 
-### Selection Indicator, Generic (** Not yet implemented **)
+### Selection Indicator, Generic (**Not yet implemented**)
 Methods for indicating currently selected objects, handling both selecting multiple objects with a single controller, and selecting a single object with multiple controllers.
 
 ### Selection Indicator, Ghosting (**Not yet implemented**)
 Indicating the currently selected objects by making them translucent and ghostly.
 
-### Selection Indicator, Haptic (** Not yet implemented**)
+### Selection Indicator, Haptic (**Not yet implemented**)
 Indicating selections, deselections, and status by using the controller's haptic feedback.
 
-### Selection Indicator, Material Parameter (** Not yet implemented**)
+### Selection Indicator, Material Parameter (**Not yet implemented**)
 Indicating selections and status by using parameters in [dynamic material instances](https://docs.unrealengine.com/latest/INT/Engine/Rendering/Materials/MaterialInstances/).
 
 ### Selection Indicator, Outline (**Not yet implemented**)
 Indicating selections by outlining them in a cel-shader like manner.
 
-### Selection Indicator, Light (** Not yet implemented**)
+### Selection Indicator, Light (**Not yet implemented**)
 Indicating selections by activating a light at the target location.
 
-### Spawn Actor (** Not yet implemented **)
+### Spawn Actor (**Not yet implemented**)
 Allowing events to easy spawn new items.
 
-### Subscriber (** Not yet implemented **)
+### Subscriber (**Not yet implemented**)
 Allows actors other than the interaction target to be notifed when an interaction occurs.
 
-### Teleport (** Not yet implemented**)
+### Teleport (**Not yet implemented**)
 Moving the player's pawn to the location of the interaction, including basic collision/validity testing both for indication and confirmation.
 * Moving the player around (Teleport methods in *The Lab*)
  
-### Trigger (** Not yet implemented**)
+### Trigger (**Not yet implemented**)
 Events triggered simply by moving the controller into the trigger volume.
 
 ## License
