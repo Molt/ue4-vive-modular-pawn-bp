@@ -5,4 +5,3 @@
 * Can't check if thumbstick is down- is it coming through is a GameController channel instead?
 
 ## Problems
-* GetControllerStatus should not be pure
