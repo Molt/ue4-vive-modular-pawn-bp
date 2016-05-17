@@ -9,12 +9,12 @@ There are a number of different input approaches used with the HTC Vive motion c
 There are two parallel versions of this project, one using pure Blueprints and one using C++. This is the Blueprint version, the C++ version is available [here](https://github.com/Molt/ue4-vive-modular-pawn-cpp/).
 
 ## Current Status
-I'm migrating my existing work over to this repository.
+Implementing the basic interactivity approaches, with massive periodic refactoring to better support the setup.  Documenting how each of the approaches is supported will be done after the base system is not being changed and rewritten so quickly, in the meantime the demo scenes provide worked examples.
 
 ## Interactivity Approaches
 The different interactivity mechanisms which are to be supported by the system are:
 
-### Controller Mesh (**Not yet implemented**)
+### Controller Mesh
 Indicating the position and rotation of the component by the use of a static mesh component.
 * Pretty much every motion controller game ever..
 
@@ -28,7 +28,7 @@ Moving the controller round in a preset gesture to trigger a special event.
 * Writing letters in the air, and using text gesture recognition.
 * Drawing 'Magical symbols' in the air to cast spells.
 
-### Laser Gun (**Not yet implemented**)
+### Laser Gun
 A special implementation of *Ray* interaction which allows an easy implementation of beam weapons.
 * Weapons which travel in straight lines. (Firing lasers in *Space Pirates*)
 
@@ -44,13 +44,13 @@ An attached physics-based collision volume allow you to hit physics items in the
 
 ### Projectile Gun (**Not yet implemented**)
 Firing a projectile from the controller.
-* Weapons which are subject to gravity.  (Firing bows in both *Holopoint* and *The Lab*)
+* Weapons which are subject to gravity.  (Firing bows in both *Holopoint* and *The Lab*, some of the weapons in *Space Pirate Trainer*)
 
 ### Projectile Ray (**Not yet implemented**)
 A modified version of *Ray* where instead of using a straight ray the interaction uses a 'drooping' line.  This can be useful for *Teleport* as it makes it easier to target areas on the ground.
 * Selecting a teleport location. (Choosing targets in *Budget Cuts*)
 
-### Ray (**Not yet implemented**)
+### Ray
 Interacting with elements by firing a 'beam' in the direction of the controller.
 * Selecting items from a menu. (The game loader in *SteamVR*, Choosing tools in *TiltBrush*)
 
@@ -92,11 +92,15 @@ Using the controller to select options from a standard UI, inserted onto a mesh 
 * Selecting from a fixed-place menu. (The main menu in *StartVR*)
 * Selecting from a mobile menu (Choosing tools in *TiltBrush*)
 
-### Scripted Response (**Not yet implemented**)
+### Scripted Response (**Partly implemented**)
 Allowing simple events to be fired in order to allow items to have their own custom behaviors written for them.
 
 ### Selection Indicator, Audio (**Not yet implemented**)
 Indicating the currently selected objects by making them have spatialized 3d audio cues.
+
+### Selection Indicator, Tinted Decal (**Not yet implemented**)
+Mark the location on an interaction by use of a [decal](https://docs.unrealengine.com/latest/INT/Engine/Actors/DecalActor/), which can optionally be coloured to indicate a status.
+* Selecting a region on the ground to teleport to (The motion system in *The Lab*)
 
 ### Selection Indicator, Generic (**Not yet implemented**)
 Methods for indicating currently selected objects, handling both selecting multiple objects with a single controller, and selecting a single object with multiple controllers.
@@ -125,9 +129,15 @@ Allows actors other than the interaction target to be notifed when an interactio
 ### Teleport (**Not yet implemented**)
 Moving the player's pawn to the location of the interaction, including basic collision/validity testing both for indication and confirmation.
 * Moving the player around (Teleport methods in *The Lab*)
- 
+
 ### Trigger (**Not yet implemented**)
 Events triggered simply by moving the controller into the trigger volume.
+
+## Current Demo Scenes
+
+## To Do
+* Track when both controllers are active on an object so the ```On Out``` event doesn't fire the same way.
+* Find out how to access the grip and thumbstick press events.
 
 ## License
 The MIT License (MIT)
