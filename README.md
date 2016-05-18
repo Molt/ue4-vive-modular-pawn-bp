@@ -18,19 +18,22 @@ The different interactivity mechanisms which are to be supported by the system a
 Indicating the position and rotation of the component by the use of a static mesh component.
 * Pretty much every motion controller game ever..
 
-### Collision Volume (**Not yet implemented**)
-The controller has a volume attached which triggers events on interactive object.
-* Moving the controller near an object and allowing you to move it about (Dragging the drawers about in *The Lab*)
-* Acting as a non-physics blocking volume (The shields in *Audioshield*)
-
 ### Gesture Recognition (**Not yet implemented**)
 Moving the controller round in a preset gesture to trigger a special event.
 * Writing letters in the air, and using text gesture recognition.
 * Drawing 'Magical symbols' in the air to cast spells.
 
 ### Laser Gun
-A special implementation of *Ray* interaction which allows an easy implementation of beam weapons.
+A special use of *Ray* interaction which allows an easy implementation of beam weapons.
+
+This is actually just done by using the ```OnTriggerPressed``` event with a *Ray* interaction.
+
 * Weapons which travel in straight lines. (Firing lasers in *Space Pirates*)
+
+### Overlap Volume
+The controller has a volume attached which triggers events on interactive object.
+* Moving the controller near an object and allowing you to move it about (Dragging the drawers about in *The Lab*)
+* Acting as a non-physics blocking volume (The shields in *Audioshield*)
 
 ### Physics Handle (**Not yet implemented**)
 Attaching physics items to the controller so that you can either carry them about.
@@ -66,8 +69,8 @@ The following features will be written as helpful functions for implementing int
 Applying damage to an item, and destroying it when it takes too much.
 * Damaging opponents and targets in 'non-instakill' methods. (Weapon results in *Space Pirates*, *Brookhaven Experiment* or *Arizona Sunshine*)
 
-### Destroy Actor (**Not yet implemented **)
-Destroying an interactive target instantly.
+### Destroy Actor
+Destroying an interactive target instantly.  This isn't actually a custom trick as UE4 provides the Destroy Actor Blueprint node.
 * Destroying targets which only need one hit. (Simple test targets)
 * Editor tools. (Deleting objects in the VR editor for *Unreal Engine 4*)
 
