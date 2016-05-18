@@ -129,8 +129,13 @@ Allowing events to easy spawn new items.
 ### Subscriber (**Not yet implemented**)
 Allows actors other than the interaction target to be notifed when an interaction occurs.
 
-### Teleport (**Not yet implemented**)
+### Teleport
 Moving the player's pawn to the location of the interaction, including basic collision/validity testing both for indication and confirmation.
+
+This can be easily done using existing Blueprint mechanisms by calling ```SetActorLocation``` on the Pawn.
+
+Need to add support for checking the navmesh to make sure the area targetted is actually walkable.
+
 * Moving the player around (Teleport methods in *The Lab*)
 
 ### Trigger (**Not yet implemented**)
@@ -138,11 +143,41 @@ Events triggered simply by moving the controller into the trigger volume.
 
 ## Current Demo Scenes
 
+### 01_RayInteraction
+Both controllers fire coloured lines from them, impacts are marked with a sphere mesh.
+
+Spheres lying round the map light up with a controller activates them, and dim when no longer selected.  Pulling the trigger of one Controller will attract the sphere to the player, pulling the other will repel it.
+
+Rings line the corners of the level, one Controller's trigger will turn then clockwise and the other anti-clockwise.
+
+### 02_InputValues
+Obtains the input values (Thumbstick, Trigger) for each Controller and uses text components to display them alongside the controller.
+
+Text is coloured based on whether the selected item is beyond it's deadzone or not.
+
+**NOTE: Currently cannot detect the Grip, or whether the thumbstick is actually being pressed**.
+
+### 03_RayTriggerEvents
+Both Controllers fire coloured lines, and lining up with one of the blue spheres and pulling the trigger will quickly shrink and destroy the ball.
+
+### 04_OverlapLights
+A control board with bright-coloured controls is in front of the player, and the controls light up when a Controller touches them.
+
+Pressing a trigger will cause the control to do a quick rotate animation.
+
+### 05_BasicTeleport
+Both Controllers have coloured lines firing from the, and a target decal marking their position on the floor.
+
+Pulling the trigger on a valid piece of floor will teleport the player's pawn to the location.
+
+**Note: Does not check anything about the location other than the ray has hit a floor.  This needs to be extended with navmesh support for proper use**
+
 ## To Do
 * Track when both controllers are active on an object so the ```On Out``` event doesn't fire the same way.
 * Find out how to access the grip and thumbstick press events.
+* Navmesh support for teleport checks.
 
-## License
+# License
 The MIT License (MIT)
 Copyright (c) 2016, Paul Golds
 
