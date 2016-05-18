@@ -172,6 +172,9 @@ Pulling the trigger on a valid piece of floor will teleport the player's pawn to
 
 **Note: Does not check anything about the location other than the ray has hit a floor.  This needs to be extended with navmesh support for proper use**
 
+### 06_RepulsorShield
+A cannon fires physics-based projectiles that can be blocked by the Controller, with the collision detection using overlap events rather than physics.
+
 ## To Do
 * Track when both controllers are active on an object so the ```On Out``` event doesn't fire the same way.
 * Find out how to access the grip and thumbstick press events.
