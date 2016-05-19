@@ -99,6 +99,9 @@ Applying forces to objects in the world.
 
 ### Menu (**Not yet implemented**)
 Using the controller to select options from a standard UI, inserted onto a mesh in the environment.
+
+This mesh can either be freestanding in the world, or attached to a controller itself.
+
 * Selecting from a fixed-place menu. (The main menu in *StartVR*)
 * Selecting from a mobile menu (Choosing tools in *TiltBrush*)
 
@@ -190,6 +193,7 @@ A verstion of *01_RayInteraction*, but the straight ray is replaced by a parabol
 * Find out how to access the grip and thumbstick press events.
 * Navmesh support for teleport checks.
 * Implement a 'Path Drawing' set of components to allow the rays/parabola to be drawn in different ways.
+* Change the way Rays find impact points- now that they have other child components.
 
 # License
 The MIT License (MIT)
