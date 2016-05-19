@@ -9,7 +9,9 @@ There are a number of different input approaches used with the HTC Vive motion c
 There are two parallel versions of this project, one using pure Blueprints and one using C++. This is the Blueprint version, the C++ version is available [here](https://github.com/Molt/ue4-vive-modular-pawn-cpp/).
 
 ## Current Status
-Implementing the basic interactivity approaches, with massive periodic refactoring to better support the setup.  Documenting how each of the approaches is supported will be done after the base system is not being changed and rewritten so quickly, in the meantime the demo scenes provide worked examples.
+The basic structure now seems sound, and I'm working on implementing all of the interaction models and getting demos working for all of them.
+
+When this is done I'll go through, tidying the Blueprints, and writing the documentation for all of it.
 
 ## Interactivity Approaches
 The different interactivity mechanisms which are to be supported by the system are:
@@ -20,8 +22,11 @@ Indicating the position and rotation of the component by the use of a static mes
 
 ### Gesture Recognition (**Not yet implemented**)
 Moving the controller round in a preset gesture to trigger a special event.
+
 * Writing letters in the air, and using text gesture recognition.
 * Drawing 'Magical symbols' in the air to cast spells.
+
+**Note: It's possible this may not be supported in the Blueprint version.  Writing a gesture recognition system there doesn't sound like fun.**
 
 ### Laser Gun
 A special use of *Ray* interaction which allows an easy implementation of beam weapons.
@@ -49,8 +54,10 @@ An attached physics-based collision volume allow you to hit physics items in the
 Firing a projectile from the controller.
 * Weapons which are subject to gravity.  (Firing bows in both *Holopoint* and *The Lab*, some of the weapons in *Space Pirate Trainer*)
 
-### Parabolid Ray (**Not yet implemented**)
-A modified version of *Ray* where instead of using a straight ray the interaction uses a 'drooping' line.  This can be useful for *Teleport* as it makes it easier to target areas on the ground.
+### Parabolic Ray (**Currently in progress**)
+A modified version of *Ray* where instead of using a straight ray the interaction uses a 'drooping' parabolic curve.
+
+This can be useful for *Teleport* as it makes it easier to target areas on the ground.
 * Selecting a teleport location. (Choosing targets in *Budget Cuts*)
 
 ### Ray
@@ -182,6 +189,7 @@ A verstion of *01_RayInteraction*, but the straight ray is replaced by a parabol
 * Track when both controllers are active on an object so the ```On Out``` event doesn't fire the same way.
 * Find out how to access the grip and thumbstick press events.
 * Navmesh support for teleport checks.
+* Implement a 'Path Drawing' set of components to allow the rays/parabola to be drawn in different ways.
 
 # License
 The MIT License (MIT)
