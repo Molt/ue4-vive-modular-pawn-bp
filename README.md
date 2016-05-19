@@ -49,7 +49,7 @@ An attached physics-based collision volume allow you to hit physics items in the
 Firing a projectile from the controller.
 * Weapons which are subject to gravity.  (Firing bows in both *Holopoint* and *The Lab*, some of the weapons in *Space Pirate Trainer*)
 
-### Projectile Ray (**Not yet implemented**)
+### Parabolid Ray (**Not yet implemented**)
 A modified version of *Ray* where instead of using a straight ray the interaction uses a 'drooping' line.  This can be useful for *Teleport* as it makes it easier to target areas on the ground.
 * Selecting a teleport location. (Choosing targets in *Budget Cuts*)
 
@@ -174,6 +174,9 @@ Pulling the trigger on a valid piece of floor will teleport the player's pawn to
 
 ### 06_RepulsorShield
 A cannon fires physics-based projectiles that can be blocked by the Controller, with the collision detection using overlap events rather than physics.
+
+### 07_ParabolicRayInteraction
+A verstion of *01_RayInteraction*, but the straight ray is replaced by a parabolic curve.
 
 ## To Do
 * Track when both controllers are active on an object so the ```On Out``` event doesn't fire the same way.
