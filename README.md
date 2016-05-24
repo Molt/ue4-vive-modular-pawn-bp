@@ -16,7 +16,7 @@ When this is done I'll go through, tidying the Blueprints, and writing the docum
 ## Interactivity Approaches
 The different interactivity mechanisms which are to be supported by the system are:
 
-### ChessBoard (**In progress**)
+### ChessBoard (**Demo written, but could do with more utility support**)
 Controlling a game by choosing pieces and locations on a game board.
 
 ### Controller Mesh
@@ -201,6 +201,15 @@ A cannon fires physics-based projectiles that can be blocked by the Controller, 
 ### 07_ParabolicRayInteraction
 A verstion of *01_RayInteraction*, but the straight ray is replaced by a parabolic curve.
 
+### 08_ParabolicRayInteraction
+A verstion of *07_ParabolicRayInteraction*, but the debug lines used to draw the curve are replaced by a SplineMesh.  A bigger hit for performance, but very nice effect.
+
+### 09_SwordDrone
+Simple Overlap demo.  When the drone his hit by a sword (On Over) event it'll move to another point in it's play area.
+
+### 10_ChessBoard
+A piece-moving demo.  Select a piece, select an unoccupied tile, and it'll move over there.
+
 <hr/>
 
 ## To Do
@@ -218,3 +227,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+\
