@@ -210,6 +210,9 @@ Simple Overlap demo.  When the drone his hit by a sword (On Over) event it'll mo
 ### 10_ChessBoard
 A piece-moving demo.  Select a piece, select an unoccupied tile, and it'll move over there.
 
+### 11_Baseball
+An enhanced physics demo.  The collision of the ball is handled by normal UE4 physics, and a set of hooks in the On Over events allow the trigger to be used to add extra impact when the ball is hit.
+
 <hr/>
 
 ## To Do
