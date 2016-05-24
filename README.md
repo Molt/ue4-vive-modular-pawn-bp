@@ -16,6 +16,9 @@ When this is done I'll go through, tidying the Blueprints, and writing the docum
 ## Interactivity Approaches
 The different interactivity mechanisms which are to be supported by the system are:
 
+### ChessBoard (**In progress**)
+Controlling a game by choosing pieces and locations on a game board.
+
 ### Controller Mesh
 Indicating the position and rotation of the component by the use of a static mesh component.
 * Pretty much every motion controller game ever..
@@ -40,6 +43,12 @@ The controller has a volume attached which triggers events on interactive object
 * Moving the controller near an object and allowing you to move it about (Dragging the drawers about in *The Lab*)
 * Acting as a non-physics blocking volume (The shields in *Audioshield*)
 
+### Parabolic Ray
+A modified version of *Ray* where instead of using a straight ray the interaction uses a 'drooping' parabolic curve.
+
+This can be useful for *Teleport* as it makes it easier to target areas on the ground.
+* Selecting a teleport location. (Choosing targets in *Budget Cuts*)
+
 ### Physics Handle (**Not yet implemented**)
 Attaching physics items to the controller so that you can either carry them about.
 * Moving, and throwing, props. (Many of the interactions in *Job Simulator*)
@@ -54,12 +63,6 @@ An attached physics-based collision volume allow you to hit physics items in the
 Firing a projectile from the controller.
 * Weapons which are subject to gravity.  (Firing bows in both *Holopoint* and *The Lab*, some of the weapons in *Space Pirate Trainer*)
 
-### Parabolic Ray (**Currently in progress**)
-A modified version of *Ray* where instead of using a straight ray the interaction uses a 'drooping' parabolic curve.
-
-This can be useful for *Teleport* as it makes it easier to target areas on the ground.
-* Selecting a teleport location. (Choosing targets in *Budget Cuts*)
-
 ### Ray
 Interacting with elements by firing a 'beam' in the direction of the controller.
 * Selecting items from a menu. (The game loader in *SteamVR*, Choosing tools in *TiltBrush*)
@@ -68,6 +71,7 @@ Interacting with elements by firing a 'beam' in the direction of the controller.
 Using the location and rotation of the controller as raw driving features for an interaction.
 * Tracing curves through space (Drawing in *TiltBrush*)
 
+<hr/>
 
 ## Interactive Utilities
 The following features will be written as helpful functions for implementing interactive elements.
@@ -151,6 +155,15 @@ Need to add support for checking the navmesh to make sure the area targetted is 
 ### Trigger (**Not yet implemented**)
 Events triggered simply by moving the controller into the trigger volume.
 
+<hr/>
+
+## Utility Features
+
+### Motion Dampener (**Not yet implemented**)
+Sometimes the raw input values from hardware such  as the Vive are too noisy, and need to be smoothed.  This is where the Motion Dampener comes in, providing easy access to a smoother set of data.
+
+<hr/>
+
 ## Current Demo Scenes
 
 ### 01_RayInteraction
@@ -188,12 +201,13 @@ A cannon fires physics-based projectiles that can be blocked by the Controller, 
 ### 07_ParabolicRayInteraction
 A verstion of *01_RayInteraction*, but the straight ray is replaced by a parabolic curve.
 
+<hr/>
+
 ## To Do
 * Track when both controllers are active on an object so the ```On Out``` event doesn't fire the same way.
-* Find out how to access the grip and thumbstick press events.
 * Navmesh support for teleport checks.
-* Implement a 'Path Drawing' set of components to allow the rays/parabola to be drawn in different ways.
-* Change the way Rays find impact points- now that they have other child components.
+
+<hr/>
 
 # License
 The MIT License (MIT)
