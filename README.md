@@ -152,6 +152,9 @@ Need to add support for checking the navmesh to make sure the area targetted is 
 
 * Moving the player around (Teleport methods in *The Lab*)
 
+### Thumbstick Dial
+Treat the outside of the thumbpad as though it were a dial, allowing a simple rotational control to be implemented.
+
 ### Trigger (**Not yet implemented**)
 Events triggered simply by moving the controller into the trigger volume.
 
