@@ -1,7 +1,7 @@
 # ue4-vive-modular-pawn-bp
 A modular pawn setup and interactivity library for using the [HTC Vive](https://www.htcvive.com/uk/), and it's Motion Controllers, in the Unreal Engine.
 
-**IMPORTANT: This isn't ready for production use yet and so shouldn't really be used..**
+**IMPORTANT: This isn't ready for production use yet and so shouldn't really be used in that way..**
 
 ## Overview
 There are a number of different input approaches used with the HTC Vive motion controller.  This project is to provide a modular system which will allow a pawn to support these approaches, along with a set of utility functions to allow simple implementation of interactive items in the environment.
@@ -54,7 +54,7 @@ Attaching physics items to the controller so that you can either carry them abou
 * Moving, and throwing, props. (Many of the interactions in *Job Simulator*)
 * Using both controllers together for greater control over object positioning (The VR editor part of *Unreal Engine 4*)
 
-### Physics Mesh (**Not yet implemented**)
+### Physics Mesh
 An attached physics-based collision volume allow you to hit physics items in the game environment.
 * Hitting baseballs with a bat.
 * Pushing over props. (Shoving items around in *Job Simulator*)
@@ -155,7 +155,7 @@ Need to add support for checking the navmesh to make sure the area targetted is 
 ### Thumbstick Dial
 Treat the outside of the thumbpad as though it were a dial, allowing a simple rotational control to be implemented.
 
-### Trigger (**Not yet implemented**)
+### Trigger
 Events triggered simply by moving the controller into the trigger volume.
 
 <hr/>
@@ -180,8 +180,6 @@ Rings line the corners of the level, one Controller's trigger will turn then clo
 Obtains the input values (Thumbstick, Trigger) for each Controller and uses text components to display them alongside the controller.
 
 Text is coloured based on whether the selected item is beyond it's deadzone or not.
-
-**NOTE: Currently cannot detect the Grip, or whether the thumbstick is actually being pressed**.
 
 ### 03_RayTriggerEvents
 Both Controllers fire coloured lines, and lining up with one of the blue spheres and pulling the trigger will quickly shrink and destroy the ball.
@@ -216,6 +214,9 @@ A piece-moving demo.  Select a piece, select an unoccupied tile, and it'll move 
 ### 11_Baseball
 An enhanced physics demo.  The collision of the ball is handled by normal UE4 physics, and a set of hooks in the On Over events allow the trigger to be used to add extra impact when the ball is hit.
 
+### 12_RotateArrows
+Point the controller at the arrow models on the ground and use the thumbstick as a dial to rotate them.  Includes clamping angle in the	&plusmn;180&deg; range in order to minimise the discontinuity.
+
 <hr/>
 
 ## To Do
@@ -233,4 +234,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-\
+
