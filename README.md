@@ -220,6 +220,9 @@ Point the controller at the arrow models on the ground and use the thumbstick as
 ### 13_ParabolicRayInteractionWithSingleSplineMeshRenderer
 Modified version of *08_ParabolicRayInteractionWithSplinePathRenderer* using a single SplineMeshComponent, so more efficient.  Does need to scale the tangents by the length of the spline, though.
 
+### 14_GrabObjectsWithOverlap
+Use the triggers to grab a set of cubes in front of you and throw them about a bit.
+
 <hr/>
 
 ## To Do
