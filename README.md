@@ -202,7 +202,7 @@ A cannon fires physics-based projectiles that can be blocked by the Controller, 
 ### 07_ParabolicRayInteraction
 A verstion of *01_RayInteraction*, but the straight ray is replaced by a parabolic curve.
 
-### 08_ParabolicRayInteraction
+### 08_ParabolicRayInteractionWithSplinePathRenderer
 A verstion of *07_ParabolicRayInteraction*, but the debug lines used to draw the curve are replaced by a SplineMesh.  A bigger hit for performance, but very nice effect.
 
 ### 09_SwordDrone
@@ -216,6 +216,9 @@ An enhanced physics demo.  The collision of the ball is handled by normal UE4 ph
 
 ### 12_RotateArrows
 Point the controller at the arrow models on the ground and use the thumbstick as a dial to rotate them.  Includes clamping angle in the	&plusmn;180&deg; range in order to minimise the discontinuity.
+
+### 13_ParabolicRayInteractionWithSingleSplineMeshRenderer
+Modified version of *08_ParabolicRayInteractionWithSplinePathRenderer* using a single SplineMeshComponent, so more efficient.  Does need to scale the tangents by the length of the spline, though.
 
 <hr/>
 
@@ -234,4 +237,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
